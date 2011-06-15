@@ -1,0 +1,19 @@
+<div id='form' data-role='page'>
+  <%- @include 'header' %>
+  <div data-role='content'>
+    <%- @form() %>
+  </div>
+</div>
+
+<script id='form-template' type='text/handlebars'>
+  <div data-role='fieldcontain'>
+    <%- @label for: 'name', 'Name' %>
+    <%- @textField id: 'name', name: 'name', placeholder: 'enter name', value: '{{name}}' %>
+    <%- @label for: 'description', 'Description' %>
+    <%- @textArea id: 'description', name: 'description', placeholder: 'enter description', '{{description}}' %>
+    <%- @label for: 'owner', 'Owner' %>
+    <%- @textField id: 'owner', name: 'owner', placeholder: 'enter owner', value: '{{owner}}' %>
+  </div>
+  <button>{{action}}</button>
+  <a href='#' data-action='cancel' data-role='button'>Cancel</a>
+</script>

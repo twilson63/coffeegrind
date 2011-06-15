@@ -1,0 +1,31 @@
+<div id='show' data-role='page'>
+  <div data-role='header'>
+    <a href='#home'>Projects</a>
+    <a href='#form'>Edit</a>
+    <h1>The CoffeeGrind</h1>
+  </div>
+</div>
+
+<script id='show-template' type='text/handlebars'>
+  <div data-role='content'>
+    <ul data-role='listview'>
+      <li data-role='list-divider'>Name</li>
+      <li>{{name}}</li>
+      <li data-role='list-divider'>Owner</li>
+      <li>{{owner}}</li>
+      <li data-role='list-divider'>Description</li>
+      <li>{{description}}</li>
+    </ul>
+  </div>
+  <div data-role='header'>
+    <h1>Timeline</h1>
+    <a href='#status'>Add</a>
+  </div>
+  <div data-role='content'>
+    <ul data-role='listview'>
+      {{#each statuses}}
+      <li>{{description}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</script>

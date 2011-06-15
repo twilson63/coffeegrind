@@ -1,0 +1,20 @@
+{
+  "name": "coffeegrind",
+  "description": "The Duncan Donuts of project management",
+  "version": "0.0.1",
+  "homepage": "http://github.com/twilson63/coffeegrind",
+  "keywords": ["coffeemate", "coffeescript", "handlebars", "eco"],
+  "author": "twilson63",
+  "dependencies": {
+    "coffeemate": "0.x",
+    "coffee-script": "1.x",
+    "eco": ">= 1.x",
+    "stitch": "0.x"
+  },
+  "devDependencies": {
+    "jasmine-node": "1.x",
+    "fermata": "0.x",
+    "jsdom": "0.x" 
+  },
+  "engines": { "node": ">= 0.4.7" }
+}

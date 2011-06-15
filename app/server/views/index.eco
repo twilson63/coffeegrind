@@ -1,0 +1,6 @@
+<%- @include 'login' %>
+<%- @include 'home' %>
+<%- @include 'form' %>
+<%- @include 'show' %>
+<%- @include 'status' %>
+
