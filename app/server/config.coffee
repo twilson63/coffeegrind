@@ -5,5 +5,8 @@ class Config
     mate.context.eco = (tmpl) ->
       @view = tmpl
       @render 'layout'
+    
+    mate.static __dirname + '/public'
+
 
 module.exports = new Config

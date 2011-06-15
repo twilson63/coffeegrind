@@ -9,8 +9,12 @@ class Helpers
     context.textField = ->
       [opts] = (o for o in arguments when typeof o is 'object') or [{}]
       opts.type = 'text'
-      @util.tag 'input', [opts]
-
+      @util.tag('input', [opts]).replace(/><\/input>/, ' />')
+    context.passwordField = ->
+      [opts] = (o for o in arguments when typeof o is 'object') or [{}]
+      opts.type = 'password'
+      @util.tag('input', [opts]).replace(/><\/input>/, ' />')
+ 
     context.textArea = -> @util.tag 'textarea', arguments
     context.form = -> @util.tag 'form', arguments
     context.util =

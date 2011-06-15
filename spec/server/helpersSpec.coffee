@@ -18,13 +18,17 @@ describe 'helpers', ->
   describe 'textField', ->
     it 'should accept id, name, and placeholder', ->
       result = context.textField id: 'user', name: 'user', placeholder: 'enter user'
-      expect(result).toEqual("<input id='user' name='user' placeholder='enter user' type='text'></input>")
+      expect(result).toEqual("<input id='user' name='user' placeholder='enter user' type='text' />")
     it 'should accept id', ->
       result = context.textField id: 'user'
-      expect(result).toEqual("<input id='user' type='text'></input>")
+      expect(result).toEqual("<input id='user' type='text' />")
     it 'should accept name', ->
       result = context.textField name: 'user'
-      expect(result).toEqual("<input name='user' type='text'></input>")
+      expect(result).toEqual("<input name='user' type='text' />")
+  describe 'passwordField', ->
+    it 'should be valid', ->
+      result = context.passwordField id: 'password', name: 'password'
+      expect(result).toEqual("<input id='password' name='password' type='password' />")
   describe 'form', ->
     it 'should accept action and method attributes', ->
       result = context.form action: 'foo', method: 'bar'

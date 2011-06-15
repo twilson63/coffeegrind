@@ -1,4 +1,13 @@
-console.log 'hello x'
-$(document).bind 'mobileinit', ->
-  $.mobile.ajaxEnabled = false
-  console.log 'hello world'
+class App
+  load_views: ->
+    #load views
+    require('./login')
+
+  constructor: ->
+    # init application
+    #$ = jQuery
+    jQuery.mobile.ajaxEnabled = false
+
+
+module.exports = new App
+

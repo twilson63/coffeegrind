@@ -8,12 +8,12 @@
       </div>
       <div data-role='fieldcontain'>
         <%- @label for: 'password', 'Password' %>
-        <%- @textField id: 'password_confirmation', placeholder: 'enter password' %>
+        <%- @passwordField id: 'password', placeholder: 'enter password' %>
         <%- @label for: 'password_confirmation', 'Confirm Password' %>
-        <%- @textField id: 'password_confirmation', placeholder: 're-enter password' %>
+        <%- @passwordField id: 'password_confirmation', placeholder: 're-enter password' %>
       </div>
       <button>Login</button>
-      <a href='#' data-action='cancel'>Cancel</a>
-    </div>
+      <a href='#' data-role='button' data-action='cancel'>Cancel</a>
+    <% end %>
   </div>
 </div>
