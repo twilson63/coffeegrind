@@ -1,7 +1,5 @@
+mate = require 'coffeemate'
 helpers = require('../../app/server/helpers')
-
-context = {}
-helpers.extends(context)
 
 describe 'helpers', ->
   describe 'util', ->
@@ -33,4 +31,3 @@ describe 'helpers', ->
     it 'should accept action and method attributes', ->
       result = context.form action: 'foo', method: 'bar'
       expect(result).toEqual("<form action='foo' method='bar'></form>")
-
