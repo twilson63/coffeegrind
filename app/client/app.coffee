@@ -1,7 +1,13 @@
 class App
   load_views: ->
     #load views
-    require('./login')
+    require './views/sessions/login'
+    require './views/projects/home'
+    require './views/projects/edit'
+    require './views/projects/new'
+    require './views/statuses/new'
+    require './views/users/new'
+
 
   constructor: ->
     # init application
