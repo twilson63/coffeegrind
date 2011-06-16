@@ -9,7 +9,8 @@
     "coffeemate": "0.x",
     "coffee-script": "1.x",
     "eco": ">= 1.x",
-    "stitch": "0.x"
+    "stitch": "0.x",
+    "mongoskin": "0.x"
   },
   "devDependencies": {
     "jasmine-node": "1.x",
