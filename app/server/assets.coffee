@@ -1,4 +1,5 @@
-stitch = require('stitch')
+stitch = require 'stitch'
+mate = require 'coffeemate'
 
 package = stitch.createPackage 
   paths: [__dirname + '/../client']
@@ -7,13 +8,8 @@ package = stitch.createPackage
     __dirname + '/../../vendor/handlebars.1.0.0.beta.3.js'
   ]
 
-class Assets
-  extends: (mate) ->
-    # Get Javascript
-    mate.get '/application.js', -> 
-      # Use Stich to return one app.js file
-      package.compile (err, source) =>
-        @resp.writeHead 200, 'Content-Type': 'text/javascript'
-        @resp.end source
-module.exports = new Assets
-
+mate.get '/application.js', -> 
+  # Use Stich to return one app.js file
+  package.compile (err, source) =>
+    @resp.writeHead 200, 'Content-Type': 'text/javascript'
+    @resp.end source
