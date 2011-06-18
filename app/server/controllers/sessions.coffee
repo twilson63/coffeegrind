@@ -25,4 +25,5 @@ class Sessions
             @req.session.authenticated = true
             @send_text 'ok'
 
+module.exports = Sessions
 
