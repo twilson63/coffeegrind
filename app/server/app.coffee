@@ -16,7 +16,7 @@ db = mongo.db(process.env.MONGODB_URL || 'localhost:27017/coffeegrind')
 
 ## Router
 # This sections is the router section
-# that routes all requests to the 
+# that routes all requests to the
 # appropriate models.
 
 Projects = require('./controllers/projects')
@@ -25,7 +25,7 @@ Projects = require('./controllers/projects')
 Users = require('./controllers/users')
 (new Users db).extends(mate)
 
-Sessions = require('./controller/sessions')
+Sessions = require('./controllers/sessions')
 (new Sessions db).extends(mate)
 
 
